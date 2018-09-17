@@ -1,4 +1,5 @@
 # alucard
 
-#目录
-*[网络分层](https://github.com/hadyang/interview/blob/master/basic/net/osi.md)
+## 目录
+*[rabbitmq](https://github.com/sunxiji/alucard/tree/master/rabbitmq)
+*[分布式锁](https://github.com/sunxiji/alucard/tree/master/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81)
