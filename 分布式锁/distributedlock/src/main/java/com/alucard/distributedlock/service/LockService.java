@@ -1,5 +1,6 @@
 package com.alucard.distributedlock.service;
 
+import com.alucard.distributedlock.annotation.DistributedLock;
 import com.alucard.distributedlock.redis.RedisLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,5 +36,17 @@ public class LockService {
         if (releaseLock) {
             System.out.println(Thread.currentThread().getName() + "释放锁成功,锁id identifier:" + identifier);
         }
+    }
+
+    @DistributedLock(key="alucard",acqireTimeout = 5000L,timeout = 5000L)
+    public void flashSale(){
+
+        // 此处模拟业务处理
+        try {
+            Thread.sleep(30);
+        } catch (Exception e) {
+
+        }
+
     }
 }
