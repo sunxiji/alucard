@@ -1,0 +1,18 @@
+###服务器端口号
+server:
+  port: 8100
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+###因为自己是注册中心,不需要注册自己
+    register-with-eureka: false
+###因为自己是注册中心,不需要检索服务
+    fetch-registry: false
+  server:
+    #####  （设为false，关闭自我保护主要）
+    enable-self-preservation: false
+    #####剔除失效服务间隔
+    eviction-interval-timer-in-ms: 2000

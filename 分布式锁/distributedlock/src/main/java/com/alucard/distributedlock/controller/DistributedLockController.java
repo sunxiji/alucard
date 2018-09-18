@@ -19,7 +19,7 @@ public class DistributedLockController {
 
     @GetMapping("testRedisLock")
     public String testRedisLock(){
-        System.out.println(11111111);
+
         // 模拟50个线程
         for (int i = 0; i < 50; i++) {
             ThreadRedis threadRedis = new ThreadRedis(lockService);

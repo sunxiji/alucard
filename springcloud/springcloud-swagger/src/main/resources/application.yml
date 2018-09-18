@@ -1,0 +1,12 @@
+##端口设置
+server:
+  port: 8091
+###注册 中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/
+###网关名称
+spring:
+  application:
+    name: alucard-swagger
