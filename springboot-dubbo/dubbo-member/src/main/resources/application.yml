@@ -1,0 +1,12 @@
+server:
+  port: 8281
+dubbo:
+  application:
+    name: member
+  protocol:
+    name: dubbo
+    port: 20884
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    base-packages: com.alucard.api.member.impl

@@ -1,0 +1,16 @@
+server:
+  port: 8232
+###dubbo 注册服务名称
+dubbo:
+  application:
+    name: order
+  ###dubbo服务地址
+  protocol:
+    name: dubbo
+    port: 20882
+  registry:
+    address: zookeeper://localhost:2181
+#  scan:
+#    base-packages: com.alucard.api
+  consumer:
+    timeout: 5000
