@@ -52,7 +52,7 @@ public class DistributedLockAspect {
         while(System.currentTimeMillis()<endTime){
             //使用setnx设置锁
             if (redisTemplate.opsForValue().setIfAbsent(key,value)){
-                log.info("{},上锁成功,value:{}",key,value);
+                log.info("{},上锁成功,value:{},time:{}",key,value,System.currentTimeMillis());
                 // 设置过期时间
                 redisTemplate.expire(key,timeout, TimeUnit.SECONDS);
                 break;
@@ -76,7 +76,7 @@ public class DistributedLockAspect {
         if (value.equals(redisTemplate.opsForValue().get(lockName))){
             // 删除该redis
             redisTemplate.delete(lockName);
-            System.out.println(value + "解锁成功......");
+            System.out.println(value + "解锁成功.......time="+System.currentTimeMillis());
             return true;
         }
         return false;

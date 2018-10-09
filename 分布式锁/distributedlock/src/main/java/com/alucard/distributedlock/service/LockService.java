@@ -27,7 +27,7 @@ public class LockService {
 
         // 此处模拟业务处理
         try {
-            Thread.sleep(30);
+            Thread.sleep(300);
         } catch (Exception e) {
 
         }
