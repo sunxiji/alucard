@@ -1,0 +1,11 @@
+server:
+  port: 8080
+##服务名称
+spring:
+  application:
+    name: alucard-member-1
+##注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka
