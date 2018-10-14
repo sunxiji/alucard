@@ -1,0 +1,11 @@
+server:
+  port: 8100
+spring:
+  application:
+    name: alucard-eureka
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false

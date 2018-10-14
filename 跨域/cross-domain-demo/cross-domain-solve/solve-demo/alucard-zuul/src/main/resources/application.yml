@@ -1,0 +1,20 @@
+server:
+  port: 80
+##服务名称
+spring:
+  application:
+    name: alucard-zuul
+##注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/
+###配置网关
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      url: http://a.alucard.com:8080
+    api-b:
+      path: /api-b/**
+      url: http://b.alucard.com:8081
