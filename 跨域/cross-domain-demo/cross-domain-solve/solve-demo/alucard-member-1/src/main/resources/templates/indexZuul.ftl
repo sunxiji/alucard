@@ -20,7 +20,7 @@
                     $.ajax({
                         type: "get",//如果我这里换成post会不会报错？
                         async: false,
-                        url: "http://api.alucard.com/api-b/getOrderInfo",
+                        url: "http://www.alucard.com:81/api-b/getOrderInfo",
                         dataType: "json",
                         success: function (data) {
                             $("#lab").text(data.code + "," + data.info);
