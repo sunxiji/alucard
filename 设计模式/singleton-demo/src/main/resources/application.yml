@@ -1,0 +1,6 @@
+server:
+  port: 8080
+aaa:
+  bbb:
+    ccc: 123
+    ddd: 456
