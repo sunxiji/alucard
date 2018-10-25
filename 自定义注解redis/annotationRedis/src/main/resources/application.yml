@@ -1,0 +1,30 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: csp
+  redis:
+    host: 10.100.23.156
+    port: 6379
+  datasource:
+    name: mydb
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://10.100.23.156:3306/csp_dev
+    username: csp_dev
+    password: 1qaz@WSX
+    driver-class-name: com.mysql.jdbc.Driver
+    minIdle: 1
+    maxActive: 2
+    initialSize: 1
+    timeBetweenEvictionRunsMillis: 3000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 'ZTM' FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+
+
+mybatis:
+  mapperLocations: classpath*:mapper/*.xml
+  typeAliasesPackage: com.alucard.entity
+
