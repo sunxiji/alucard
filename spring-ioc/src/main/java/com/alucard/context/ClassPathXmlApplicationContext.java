@@ -43,6 +43,7 @@ public class ClassPathXmlApplicationContext {
 
         SAXReader saxReader = new SAXReader();
         Document read = saxReader.read(this.getClass().getClassLoader().getResource(PATH));
+        //根节点
         Element rootElement = read.getRootElement();
         List<Element> elements = rootElement.elements();
         for (Element element : elements) {
@@ -51,7 +52,7 @@ public class ClassPathXmlApplicationContext {
                 //结束本次循环
                 continue;
             }
-            //2.使用beanid查找到对应xml节点,获得class节点属性
+            //2.使用beanId查找到对应xml节点,获得class节点属性
             //从配置文件中获取bean
             String attrClass = element.attributeValue(CLASS);
             //3.使用java反射机制初始化类
