@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  rabbitmq:
+    ###连接地址
+    host: 10.100.23.156
+    ###端口号
+    port: 5672
+    ###账号
+    username: dev
+    ###密码
+    password: 123456
+    ###virtual-host
+    virtual-host: /
+  application:
+    name: producer-rabbitmq
