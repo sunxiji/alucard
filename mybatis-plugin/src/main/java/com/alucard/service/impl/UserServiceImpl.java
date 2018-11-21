@@ -1,6 +1,6 @@
 package com.alucard.service.impl;
 
-import com.alucard.dao.UserDao;
+import com.alucard.repository.UserDao;
 import com.alucard.entity.User;
 import com.alucard.service.UserService;
 import org.springframework.stereotype.Service;

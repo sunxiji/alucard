@@ -1,4 +1,4 @@
-package com.alucard.dao;
+package com.alucard.repository;
 
 import com.alucard.entity.User;
 
