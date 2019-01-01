@@ -11,7 +11,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class ApolloDemoApplication {
     /**
      * server.properties
-     * #这里是取得哪个环节
+     * #这里是取得哪个环境
      * env=DEV
      * #这里是指使用哪个集群文件
      * idc=alu1
