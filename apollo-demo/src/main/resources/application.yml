@@ -1,0 +1,11 @@
+server:
+  port: 8081
+###¥”yml∂¡»°
+zhangsan_conf: 123456
+spring:
+  application:
+    name: apollo-demo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.30.131:8080/eureka
