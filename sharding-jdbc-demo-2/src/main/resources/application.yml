@@ -1,0 +1,20 @@
+###数据库访问连接
+spring:
+  jdbc:
+    db0:
+      className: com.mysql.jdbc.Driver
+      url: jdbc:mysql://192.168.17.128:3306/%s?characterEncoding=utf-8
+      username: root
+      password: 123456
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ## 自己建表
+      ddl-auto: none
+      use-new-id-generator-mappings: false
+  application:
+    name: sharding-jdbc-app
+mybatis:
+  mapperLocations: classpath*:mapper/*.xml
+  typeAliasesPackage: com.alucard.entity

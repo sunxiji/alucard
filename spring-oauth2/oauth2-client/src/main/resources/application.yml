@@ -1,0 +1,23 @@
+#### \u5BA2\u6237\u7AEF \u5E94\u7528\u7AEF\u89D2\u8272
+
+server:
+  port: 8081
+
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+security:
+  oauth2:
+    resource:
+      ####\u4ECE\u8BA4\u8BC1\u6388\u6743\u4E2D\u5FC3\u4E0A\u9A8C\u8BC1token
+      tokenInfoUri: http://localhost:8080/oauth/check_token
+      preferTokenInfo: true
+    client:
+      accessTokenUri: http://localhost:8080/oauth/token
+      userAuthorizationUri: http://localhost:8080/oauth/authorize
+#      ###appid
+#      clientId: client_1
+#      ###appSecret
+#      clientSecret: 123456

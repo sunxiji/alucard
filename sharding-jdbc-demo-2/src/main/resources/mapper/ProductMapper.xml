@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alucard.mapper.ProductMapper">
+
+	<resultMap id="UserResult" type="com.alucard.entity.Product" >
+		<result column="id" property="id" jdbcType="BIGINT"/>
+		<result column="product_name" property="productName" jdbcType="VARCHAR"/>
+		<result column="product_number" property="productNumber" jdbcType="BIGINT"/>
+		<result column="supplier_id" property="supplierId" jdbcType="BIGINT"/>
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,
+		product_name,
+		product_number,
+		supplier_id
+	</sql>
+
+	<insert id="insertSelective"  parameterType="com.alucard.entity.Product" >
+		insert into t_product
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="productName != null">
+				product_name,
+			</if>
+			<if test="productNumber != null">
+				product_number,
+			</if>
+			<if test="supplierId != null">
+				supplier_id,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="productName != null">
+				#{productName},
+			</if>
+			<if test="productNumber != null">
+				#{productNumber},
+			</if>
+			<if test="supplierId != null">
+				#{supplierId},
+			</if>
+		</trim>
+    </insert>
+
+
+	<select id="selectList" resultMap="UserResult">
+		select
+		<include refid="Base_Column_List"/>
+		from t_product
+	</select>
+
+
+</mapper> 

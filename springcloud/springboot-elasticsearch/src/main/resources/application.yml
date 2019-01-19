@@ -1,0 +1,7 @@
+spring:
+  data:
+    elasticsearch:
+      ####\u96C6\u7FA4\u540D\u79F0
+      cluster-name: alucardes
+      ####\u5730\u5740
+      cluster-nodes: 192.168.66.128:9300

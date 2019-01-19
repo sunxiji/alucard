@@ -1,0 +1,16 @@
+###\u6570\u636E\u5E93\u8BBF\u95EE\u8FDE\u63A5
+spring:
+  jdbc:
+    db0:
+      className: com.mysql.jdbc.Driver
+      url: jdbc:mysql://192.168.17.128:3306/%s?characterEncoding=utf-8
+      username: root
+      password: 123456
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ## \u81EA\u5DF1\u5EFA\u8868
+      ddl-auto: none
+  application:
+    name: sharding-jdbc-app

@@ -1,7 +1,7 @@
 package com.alucard.service.impl;
 
 import com.alucard.client.Demo2Client;
-import com.alucard.dao.TestMapper;
+import com.alucard.repository.TestMapper;
 import com.alucard.entity.Test;
 import com.alucard.service.DemoService;
 import com.codingapi.tx.annotation.TxTransaction;
